@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Questions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-left">
+        <img src="../banners/logo main.png" alt="Logo" />
+        <div class="nav-text">
+          <span>Agri Sphere</span>
+          <span>Ask. Learn. Grow.</span>
+        </div>
+      </div>
+      <div class="nav-right">
+        <a href="../e-quickmart-main/index.html">Shop Now</a>
+        <a href="../Fertilizer Optimizer/index.html">Get Insights</a>
+        <a href="../blog2-main/index.html">Explore Videos</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- Form Section -->
+      <div class="form-section">
+        <h2>Post a Question</h2>
+        <form>
+          <div class="form-group">
+            <label for="title">Question Title</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Enter your question title"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">Describe Question</label>
+            <textarea
+              id="description"
+              name="description"
+              placeholder="Describe your question..."
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="image">Add an Image</label>
+            <label for="image" class="custom-file-upload">+ Upload Image</label>
+            <input type="file" id="image" name="image" accept="image/*" />
+          </div>
+          <button type="submit">Post Question</button>
+        </form>
+      </div>
+
+      <!-- Posted Data Section -->
+      <div class="posted-section">
+        <h2 style="color: #555">Recent Questions</h2>
+        <div class="card-grid">
+          <!-- Example card -->
+          <div class="card">
+            <img src="post images/soil fertlity.webp" alt="Post Image" />
+            <div class="card-content">
+              <h3>How to improve soil fertility?</h3>
+              <p>Posted by: Ramesh Kumar</p>
+              <p>Date: 2025-09-21</p>
+            </div>
+            <div class="card-footer">
+              <div class="actions">
+                <span><i class="fa fa-thumbs-up"></i> 24</span>
+                <span><i class="fa fa-thumbs-down"></i> 6</span>
+              </div>
+              <button class="answer-btn" onclick="openModal()">
+                Reply Answer
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="post images/paddy farming.jpeg" alt="Post Image" />
+            <div class="card-content">
+              <h3>Best irrigation methods for paddy?</h3>
+              <p>Posted by: Anil Patel</p>
+              <p>Date: 2025-09-18</p>
+            </div>
+            <div class="card-footer">
+              <div class="actions">
+                <span><i class="fa fa-thumbs-up"></i> 12</span>
+                <span><i class="fa fa-thumbs-down"></i> 3</span>
+              </div>
+              <button class="answer-btn" onclick="openModal()">
+                Reply Answer
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="post images/maize crop.webp" alt="Post Image" />
+            <div class="card-content">
+              <h3>What fertilizers suit maize crop?</h3>
+              <p>Posted by: Sunita Reddy</p>
+              <p>Date: 2025-09-15</p>
+            </div>
+            <div class="card-footer">
+              <div class="actions">
+                <span><i class="fa fa-thumbs-up"></i> 16</span>
+                <span><i class="fa fa-thumbs-down"></i> 2</span>
+              </div>
+              <button class="answer-btn" onclick="openModal()">
+                Reply Answer
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="post images/pest.jpg" alt="Post Image" />
+            <div class="card-content">
+              <h3>How to prevent pest attacks?</h3>
+              <p>Posted by: Pooja Mehta</p>
+              <p>Date: 2025-09-12</p>
+            </div>
+            <div class="card-footer">
+              <div class="actions">
+                <span><i class="fa fa-thumbs-up"></i> 18</span>
+                <span><i class="fa fa-thumbs-down"></i> 2</span>
+              </div>
+              <button class="answer-btn" onclick="openModal()">
+                Reply Answer
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="post images/seeds.webp" alt="Post Image" />
+            <div class="card-content">
+              <h3>Which seeds are high yielding?</h3>
+              <p>Posted by: Sandeep Rao</p>
+              <p>Date: 2025-09-02</p>
+            </div>
+            <div class="card-footer">
+              <div class="actions">
+                <span><i class="fa fa-thumbs-up"></i> 29</span>
+                <span><i class="fa fa-thumbs-down"></i> 3</span>
+              </div>
+              <button class="answer-btn" onclick="openModal()">
+                Reply Answer
+              </button>
+            </div>
+          </div>
+          <div class="card">
+            <img src="post images/groundnuts.webp" alt="Post Image" />
+            <div class="card-content">
+              <h3>When to harvest groundnuts?</h3>
+              <p>Posted by: Vivek Singh</p>
+              <p>Date: 2025-09-05</p>
+            </div>
+            <div class="card-footer">
+              <div class="actions">
+                <span><i class="fa fa-thumbs-up"></i> 9</span>
+                <span><i class="fa fa-thumbs-down"></i> 0</span>
+              </div>
+              <button class="answer-btn" onclick="openModal()">
+                Reply Answer
+              </button>
+            </div>
+          </div>
+          <!-- Repeat more cards as needed -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="answerModal">
+      <div class="modal-content">
+        <h3>Submit Your Answer</h3>
+        <textarea placeholder="Write your answer..."></textarea>
+        <div>
+          <button class="close-btn" onclick="closeModal()">Close</button>
+          <button class="answer-btn" onclick="submitAnswer()">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Popup -->
+    <div class="success-popup" id="successPopup">Submitted ✔</div>
+
+    <script>
+      function toggleMenu() {
+        document.querySelector(".nav-right").classList.toggle("active");
+      }
+
+      function openModal() {
+        document.getElementById("answerModal").style.display = "flex";
+      }
+
+      function closeModal() {
+        document.getElementById("answerModal").style.display = "none";
+      }
+
+      function submitAnswer() {
+        closeModal();
+        let popup = document.getElementById("successPopup");
+        popup.style.display = "block";
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 3000);
+      }
+    </script>
+  </body>
+</html>
